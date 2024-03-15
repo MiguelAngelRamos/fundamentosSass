@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+$color-primario: #6a148e;
+$color-texto: indigo;
+$padding-basico: 16px;
+$font-info-size: 2rem;
+
+body {
+  font-family: "Whisper", cursive;
+}
+
+@mixin centrado-absoluto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@function color-oscuro($color, $cantidad) {
+  @return darken($color, $cantidad);
+}
+
+
+.perfil {
+  border: 1px solid $color-primario;
+  border-radius: 8px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+
+  //.perfil__imagen 
+  // Anidamiento
+  &__imagen {
+    width: 100%;
+    height: auto;
+  }
+  //.perfil__informacion
+  &__informacion {
+    font-size: $font-info-size;
+    padding: $padding-basico;
+    text-align: center;
+
+    .perfil__nombre {
+      margin: 0;
+    }
+    .perfil__nombre, .perfil__profesion {
+      color: $color-texto;
+    }
+
+    // perfil__boton
+    // perfil__informacion__boton -> este nombre de clase no existe
+    .perfil__boton {
+      padding: 10px 20px;
+      border: none;
+      background-color: $color-primario;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .perfil__boton:hover {
+      background-color: color-oscuro($color-primario, 8%)
+    }
+    
+  }
+}
+
+

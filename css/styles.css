@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
+body {
+  font-family: "Whisper", cursive;
+}
+
+.perfil {
+  border: 1px solid #6a148e;
+  border-radius: 8px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.perfil__imagen {
+  width: 100%;
+  height: auto;
+}
+.perfil__informacion {
+  font-size: 2rem;
+  padding: 16px;
+  text-align: center;
+}
+.perfil__informacion .perfil__nombre {
+  margin: 0;
+}
+.perfil__informacion .perfil__nombre, .perfil__informacion .perfil__profesion {
+  color: indigo;
+}
+.perfil__informacion .perfil__boton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #6a148e;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.perfil__informacion .perfil__boton:hover {
+  background-color: #4f0f6a;
+}/*# sourceMappingURL=styles.css.map */
